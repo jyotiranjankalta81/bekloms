@@ -55,6 +55,12 @@
 .form-sec {
     margin-right: 13.62rem;
 }
+.img_file{
+
+}
+.img_file::placeholder{
+    display: none;
+}
 .img-size {
     width: 1.7rem;
     height: 1.7rem;

@@ -19,7 +19,7 @@ const onboard = sequelize.define(tbl.TBL_GETSTARTED, {
         trim: true,
     },
     PHONENO: {
-        type: Sequelize.INTEGER(10),
+        type: Sequelize.NUMBER(13),
         trim: true,
     },
     ISDELETED: {

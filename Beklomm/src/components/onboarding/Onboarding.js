@@ -27,8 +27,7 @@ const Onboarding = () => {
     const [file,setFile] = React.useState("");
 
     const onSubmit = (e) => {
-        e.preventDefault();
-
+        
         if (!name || !email || !phoneno || !about || !file) {
             toast.error('All Fields are Required');
         }else{
@@ -45,6 +44,7 @@ const Onboarding = () => {
                 try {
                     if (res.data.status === 1) {
                         toast.success("your request submitted");
+                        
                     }
                     
                 } catch (error) {
@@ -128,11 +128,12 @@ const Onboarding = () => {
                                             background: "#FFFFFF"
                                         }
                                     }}>
-                                    <input hidden accept="image/*"
+                                        <CloudUploadIcon sx={{ color: "#456BB4", transform: "scale(1.7)" }} />
+                                    <input accept="image/*" hidden className='img_file'
                                     onChange={(event) => setFile(event.target.value)}
                                      multiple type="file" />
-                                    <CloudUploadIcon sx={{ color: "#456BB4", transform: "scale(1.7)" }} />
-                                    Drag &amp; Drop or Browse File
+                                     {!file ? "Drag &amp; Drop or Browse File" : file  }
+                                    
                                 </Button>
                         </div>
 
