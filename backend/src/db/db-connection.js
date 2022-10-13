@@ -3,8 +3,9 @@ const config = require('../config/config');
 const logger = require('../config/logger');
 
 const sequelize = new Sequelize(
-  // config.oracle.database, config.oracle.user, config.oracle.password, 
-  'techjain_beklom','root','',
+  config.oracle.database, config.oracle.user,'',
+  //  config.oracle.password, 
+  // 'techjain_beklom','root','',
   {
   host:'localhost',
   dialect: 'mysql',

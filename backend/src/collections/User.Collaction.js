@@ -76,6 +76,26 @@ class UserCollaction {
     return result;
   };
 
+  getOnBoard = async () => {
+    let result = "";
+    await TblonBoard.findAll({})
+      .then((res) => {
+        result = {
+          status: 1,
+          message: "",
+          data: res,
+        };
+      })
+      .catch((err) => {
+        result = {
+          status: 0,
+          message: "Somthing Went Wrong",
+          data: err,
+        };
+      });
+    return result;
+  };
+
   getStarted = async (body) => {
     const { NAME,EMAIL,PHONENO } = body;
     const createdAt = Date.now();

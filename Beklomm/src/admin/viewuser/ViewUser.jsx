@@ -4,32 +4,17 @@ import logoadmin from '../assets/images/logoadmin.png'
 import user from '../assets/images/user.png'
 import { Link } from 'react-router-dom';
 import AdminSidebar from '../AdminSidebar/AdminSidebar';
+import ProfileHeader from '../ProfileHeader/ProfileHeader';
+import OnBoardTable from '../MastertTables/OnBoardTable';
 
 export default function ViewUser() {
     return (
         <>
             <div className='addusercontainer'>
-                {/* <div className="adminsidebar">
-                    <img src={logoadmin} alt="logo" />
-
-                    <Link to="/adduser"><h3>Manage User </h3></Link>
-                    <Link to="/managepages"><h3>Manage Pages </h3></Link>
-                    <Link to="/getonboard"><h3>Get Onboard </h3></Link>
-                    <Link to="/texttestomonial"><h3>Text Testimonials </h3></Link>
-                    <Link to="/partnerwithus"><h3>Partner with us </h3></Link>
-                    <Link to="/contactus"><h3>Contact Us </h3></Link>
-                    <Link to="/managenews"><h3>Manage Newsletter </h3></Link>
-                    <Link to="/"><h3>Logout </h3></Link>
-
-                </div> */}
                 <AdminSidebar/>
 
                 <div className="adminbody">
-                    <div className="adminnavbar">
-                        <h2>Welcome to: Beklom</h2>
-                        <span><img src={user} alt="" /><br />Akash Singh</span>
-                    </div>
-
+                    <ProfileHeader/>
                     <div className="adduser">
                         <div className="buttons">
                             <Link to="/adduser">
@@ -47,7 +32,7 @@ export default function ViewUser() {
                         <br />
                         <br />
                         <div className="tables">
-                            <table>
+                            {/* <table>
                                 <thead>
                                     <tr>
                                         <th>ID</th>
@@ -99,7 +84,8 @@ export default function ViewUser() {
                                     </tr>
                                 </tbody>
 
-                            </table>
+                            </table> */}
+                            <OnBoardTable/>
 
                         </div>
 

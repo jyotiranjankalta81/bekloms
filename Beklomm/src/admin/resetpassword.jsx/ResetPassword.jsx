@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import AdminSidebar from '../AdminSidebar/AdminSidebar';
 import ProfileHeader from '../ProfileHeader/ProfileHeader';
 
-export default function AddUser() {
+export default function ResetPassword() {
     return (
         <>
             <div className='addusercontainer'>
@@ -14,7 +14,7 @@ export default function AddUser() {
                 <div className="adminbody">
                     <ProfileHeader/>
                     <div className="adduser">
-                        <div className="buttons">
+                        {/* <div className="buttons">
                             <Link to="/adduser">
                                 <button className="adduserbtn">
                                     Add User
@@ -25,14 +25,17 @@ export default function AddUser() {
                                     View User
                                 </button>
                             </Link>
-                        </div>
+                        </div> */}
                         <br />
                         <br />
                         <div className="inputfields">
-                            <label>Email</label>
+                            <label>Old Password</label>
                             <input type="text" />
-                            <br /><br />
-                            <label>Password</label>
+                            <br />
+                            <label>New Password</label>
+                            <input type="text" />
+                            <br />
+                            <label>Confirm Password</label>
                             <input type="text" />
                         </div>
                         <br /><br />

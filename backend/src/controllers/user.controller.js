@@ -104,6 +104,12 @@ const onBoard = catchAsync(async (req, res) => {
   res.status(httpStatus.CREATED).send(userdata);
 });
 
+// getonBoarding section
+const getOnBoard = catchAsync(async (req, res) => {
+  const userdata = await userService.getOnBoard(req.body);
+  res.status(httpStatus.CREATED).send(userdata);
+});
+
 // get Started
 const getStarted = catchAsync(async (req, res) => {
   const userdata = await userService.getStarted(req.body);
@@ -116,6 +122,7 @@ module.exports = {
   createUser,
   loginuser,
   onBoard,
+  getOnBoard,
   getStarted,
   resetPassword,
   getUse,

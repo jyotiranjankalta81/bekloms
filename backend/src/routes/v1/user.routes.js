@@ -14,6 +14,7 @@ router.route("/userdata").get(userController.getUse);
 
 // onboard
 router.route("/onboard").post(userController.onBoard);
+router.route("/onboard").get(userController.getOnBoard);
 
 // getStarted
 router.route("/getstarted").post(userController.getStarted);

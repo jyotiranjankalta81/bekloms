@@ -12,15 +12,13 @@
     display: flex;
     flex-direction: column;
     width: 20%;
-    height: max-content;
+    height: 100vh;
     justify-content: flex-start;
     align-items: center;
-    gap: 3%;
+    /* gap: 3%; */
     background: #777C9B;
     border-radius: 0px 60px 60px 0px;
 
-    font-family: 'Inter',sans-serif;
-    font-style: normal;
 }
 
 .adminsidebar a {
@@ -28,14 +26,23 @@
     width: 100%;
     text-align: center;
     margin-top: 5%;
-    margin-bottom: 4%;
+    display: flex;
+    padding-left: 1.5rem;
+    align-items: center;
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 30px;
+    color: #ffffff;
+    margin-bottom: 1%;
 }
 
-.adminsidebar a:focus {
-    background: #0b1449;
+.adminsidebar a.focus {
+    background: #0a0e24;
 }
 
-.adminsidebar a:active {
+.adminsidebar a.active {
     background: #0b1449;
 }
 
@@ -87,7 +94,6 @@
     height: 13vh;
     padding: 1% 2%;
     background: rgba(119, 124, 155, 0.8);
-
     font-family: 'Inter',sans-serif;
     font-style: normal;
 }
@@ -345,6 +351,7 @@
     font-family: 'Inter',sans-serif;
     font-style: normal;
     font-weight: 600;
+    margin: auto;
     font-size: 18px;
 }
 
@@ -362,95 +369,6 @@
     font-family: 'Inter',sans-serif;
     font-style: normal;
 }
-
-.tables table {
-    border-collapse: collapse;
-    width: 80%;
-}
-
-.tables table td {
-    text-align: center;
-    border: 3px solid #455A64;
-    background: #F0F0F0;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    padding: 1%;
-    font-family: 'Inter',sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    color: #4A4B4B;
-}
-
-.tables table th {
-    text-align: center;
-    border: 3px solid #455A64;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    z-index: 9;
-    padding: 2% 0%;
-    font-family: 'Inter',sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    color: #000000;
-}
-
-.tables table tr:first-child td {
-    border-top: 0;
-}
-
-.tables table tr td:first-child {
-    border-left: 0;
-}
-
-.tables table tr:last-child td {
-    border-bottom: 0;
-}
-
-.tables table tr td:last-child {
-    border-right: 0;
-}
-
-.tables table tr:first-child th {
-    border-top: 0;
-}
-
-.tables table tr th:first-child {
-    border-left: 0;
-}
-
-.tables table tr:last-child th {
-    border-bottom: 0;
-}
-
-.tables table tr th:last-child {
-    border-right: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -482,14 +400,6 @@
         font-size: 14px;
     }
 
-
-    .tables table th {
-        font-size: 13px;
-    }
-
-    .tables table td {
-        font-size: 13px;
-    }
 
     .adduser .addimage {
         flex-wrap: wrap;
@@ -527,7 +437,12 @@
 
 @media only screen and (max-width:500px) {
     .addusercontainer {
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        height: 100vh;
     }
 
     .addusercontainer .adminsidebar {
@@ -537,6 +452,10 @@
 
     .addusercontainer .adminbody {
         width: 100%;
+    }
+    .adminbody .adminnavbar {
+        margin-top: 0%;
+        height: 7vh;
     }
 
 
@@ -571,15 +490,6 @@
         font-size: 10px;
     }
 
-
-    .tables table th {
-        font-size: 9px;
-    }
-
-    .tables table td {
-        font-size: 9px;
-    }
-
     .adduser .addimage {
         flex-wrap: wrap;
         gap: 70%;
@@ -597,9 +507,4 @@
     .addreview h2 {
         font-size: 15px;
     }
-
-
-
-
-
 }

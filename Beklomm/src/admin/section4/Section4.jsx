@@ -5,6 +5,7 @@ import user from '../assets/images/user.png'
 import { Link } from 'react-router-dom';
 import ImageUploader from '../ImageUploader/ImageUploader';
 import AdminSidebar from '../AdminSidebar/AdminSidebar';
+import ProfileHeader from '../ProfileHeader/ProfileHeader';
 
 export default function Section4() {
     return (
@@ -13,11 +14,7 @@ export default function Section4() {
                 <AdminSidebar/>
 
                 <div className="adminbody">
-                    <div className="adminnavbar">
-                        <h2>Welcome to: Beklom</h2>
-                        <span><img src={user} alt="" /><br />Akash Singh</span>
-                    </div>
-
+                    <ProfileHeader/>
                     <div className="adduser">
                         <div className="buttons">
                             <Link to="/managepages"><button className="viewuserbtn">

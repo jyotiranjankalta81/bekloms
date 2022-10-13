@@ -30,8 +30,11 @@ import Section2 from "./admin/section2/Section2";
 import Section3 from "./admin/section3/Section3";
 import Section4 from "./admin/section4/Section4";
 import Section5 from "./admin/section5/Section5";
+import ResetPassword from "./admin/resetpassword.jsx/ResetPassword";
 
 function App() {
+
+  var isAuthenticated = sessionStorage.getItem("token");
   return (
     <div className="App">
 
@@ -51,20 +54,21 @@ function App() {
           <Route exact path="/blog-categories" element={< Blogcategories />} />
         
           <Route exact path="/login" element={<Login/>} />
-          <Route exact path="/adduser" element={<AddUser/>} />
-          <Route exact path="/managepages" element={<ManagePages/>} />
-          <Route exact path="/viewuser" element={<ViewUser/>} />
-          <Route exact path="/contactus" element={<ContactUs/>} />
-          <Route exact path="/managenews" element={<ManageNews/>} />
-          <Route exact path="/texttestomonial" element={<TextTestomonial/>} />
-          <Route exact path="/getonboard" element={<GetOnboard/>} />
-          <Route exact path="/partnerwithus" element={<PartnerWithUs/>} />
-          <Route exact path="/addblogs" element={<AddBlogs/>} />
-          <Route exact path="/section1" element={<Section1/>} />
-          <Route exact path="/section2" element={<Section2/>} />
-          <Route exact path="/section3" element={<Section3/>} />
-          <Route exact path="/section4" element={<Section4/>} />
-          <Route exact path="/section5" element={<Section5/>} />
+          <Route exact path="/adduser" element={ isAuthenticated ? <AddUser/> : <Login/> } />
+          <Route exact path="/managepages" element={ isAuthenticated ? <ManagePages/> : <Login/>} />
+          <Route exact path="/viewuser" element={ isAuthenticated ? <ViewUser/> : <Login/>} />
+          <Route exact path="/contactus" element={ isAuthenticated ? <ContactUs/> : <Login/>} />
+          <Route exact path="/managenews" element={ isAuthenticated ? <ManageNews/> : <Login/>} />
+          <Route exact path="/texttestomonial" element={ isAuthenticated ? <TextTestomonial/> : <Login/>} />
+          <Route exact path="/getonboard" element={ isAuthenticated ? <GetOnboard/> : <Login/>} />
+          <Route exact path="/partnerwithus" element={ isAuthenticated ? <PartnerWithUs/> : <Login/>} />
+          <Route exact path="/resetpassword" element={ isAuthenticated ? <ResetPassword/> : <Login/>} />
+          <Route exact path="/addblogs" element={ isAuthenticated ? <AddBlogs/> : <Login/>} />
+          <Route exact path="/section1" element={ isAuthenticated ? <Section1/> : <Login/>} />
+          <Route exact path="/section2" element={ isAuthenticated ? <Section2/> : <Login/>} />
+          <Route exact path="/section3" element={ isAuthenticated ? <Section3/> : <Login/>} />
+          <Route exact path="/section4" element={ isAuthenticated ? <Section4/> : <Login/>} />
+          <Route exact path="/section5" element={ isAuthenticated ? <Section5/> : <Login/>} />
 
         </Routes>
       </Router>

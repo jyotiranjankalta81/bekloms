@@ -6,32 +6,16 @@ import { Link } from 'react-router-dom';
 
 import ImageUploader from "../ImageUploader/ImageUploader";
 import AdminSidebar from '../AdminSidebar/AdminSidebar';
+import ProfileHeader from '../ProfileHeader/ProfileHeader';
+import OnBoardTable from '../MastertTables/OnBoardTable';
 
 export default function ManagePages() {
     return (
         <>
             <div className='addusercontainer'>
-                {/* <div className="adminsidebar">
-                    <img src={logoadmin} alt="logo" />
-
-                    <Link to="/adduser"><h3>Manage User </h3></Link>
-                    <Link to="/managepages"><h3>Manage Pages </h3></Link>
-                    <Link to="/getonboard"><h3>Get Onboard </h3></Link>
-                    <Link to="/texttestomonial"><h3>Text Testimonials </h3></Link>
-                    <Link to="/partnerwithus"><h3>Partner with us </h3></Link>
-                    <Link to="/contactus"><h3>Contact Us </h3></Link>
-                    <Link to="/managenews"><h3>Manage Newsletter </h3></Link>
-                    <Link to="/"><h3>Logout </h3></Link>
-
-                </div> */}
-                <AdminSidebar/>
-
+                <AdminSidebar />
                 <div className="adminbody">
-                    <div className="adminnavbar">
-                        <h2>Welcome to: Beklom</h2>
-                        <span><img src={user} alt="" /><br />Akash Singh</span>
-                    </div>
-
+                    <ProfileHeader/>
                     <div className="adduser">
                         <div className="buttons">
                             <Link to="/managepages"> <button className="viewuserbtn">
@@ -47,9 +31,7 @@ export default function ManagePages() {
                                 About Us
                             </button></Link>
                         </div>
-
                         <br /><br />
-
                         <div className="sections">
                             <Link to="/section1"><h4>Section 1</h4></Link>
                             <Link to="/section2"><h4>Section 2</h4></Link>
@@ -57,17 +39,13 @@ export default function ManagePages() {
                             <Link to="/section4"><h4>Section 4</h4></Link>
                             <Link to="/section5"><h4>Section 5</h4></Link>
                         </div>
-
                         <br /><br />
-
                         <h3><b>Courasel</b></h3>
-                        <br />  
-                            <ImageUploader />                   
-
+                        <br />
+                        <ImageUploader />
                         <br /><br />
-
                         <div className="tables">
-                            <table>
+                            {/* <table>
                                 <thead>
                                     <tr>
                                         <th>ID</th>
@@ -104,7 +82,8 @@ export default function ManagePages() {
 
                                 </tbody>
 
-                            </table>
+                            </table> */}
+                            <OnBoardTable/>
 
                         </div>
 

@@ -582,11 +582,7 @@ width: 100%;
   margin-left: -16rem;
 }
 
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), .Aero_btn:not(:disabled) {
-    cursor: pointer;
-    width: 8rem;
-    margin-left: 11rem;
-}
+
 .Bak_Img {
   width: 13rem;
   margin-left: 16rem;

@@ -4,6 +4,8 @@ import logoadmin from '../assets/images/logoadmin.png'
 import user from '../assets/images/user.png'
 import { Link } from 'react-router-dom';
 import AdminSidebar from '../AdminSidebar/AdminSidebar';
+import ProfileHeader from '../ProfileHeader/ProfileHeader';
+import OnBoardTable from '../MastertTables/OnBoardTable';
 
 export default function PartnerWithUs() {
     return (
@@ -11,17 +13,13 @@ export default function PartnerWithUs() {
             <div className='addusercontainer'>
                 <AdminSidebar/>
                 <div className="adminbody">
-                    <div className="adminnavbar">
-                        <h2>Welcome to: Beklom</h2>
-                        <span><img src={user} alt="" /><br />Akash Singh</span>
-                    </div>
-
+                    <ProfileHeader/>
                     <div className="adduser">
 
                         <br />   <br />
 
                         <div className="tables">
-                            <table>
+                            {/* <table>
                                 <thead>
                                     <tr>
                                         <th>ID</th>
@@ -91,7 +89,8 @@ export default function PartnerWithUs() {
                                     </tr>
                                 </tbody>
 
-                            </table>
+                            </table> */}
+                            <OnBoardTable/>
 
                         </div>
 

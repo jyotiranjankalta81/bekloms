@@ -92,6 +92,10 @@ const onBoard = async (body) => {
   const result = await UserCollection.onBoard(body);
   return result;
 };
+const getOnBoard = async (body) => {
+  const result = await UserCollection.getOnBoard(body);
+  return result;
+};
 
 // get Started
 const getStarted = async (body) => {
@@ -104,6 +108,7 @@ module.exports = {
   createuser,
   getStarted,
   onBoard,
+  getOnBoard,
   loginuser,
   resetPassword,
   getUse,
